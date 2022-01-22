@@ -14,6 +14,6 @@ class _ImpementationState extends State<Impementation> {
   Widget build(BuildContext context) {
     Widget _implement = widgets[widget.index].implementation;
 
-    return _implement;
+    return Scaffold(appBar: AppBar(), body: _implement);
   }
 }
