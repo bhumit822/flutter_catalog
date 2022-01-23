@@ -17,44 +17,7 @@ class _BottomSheetImplementationState extends State<BottomSheetImplementation> {
       body: Center(
         child: MaterialButton(
           onPressed: () {
-            showModalBottomSheet(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10))),
-                context: context,
-                builder: (context) {
-                  return Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        // color: Colors.white,
-                        ),
-                    height: 350,
-                    width: double.infinity,
-                    child: Column(
-                      children: [
-                        NewWidget(
-                          text: 'text 1',
-                          color: Colors.amberAccent,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        NewWidget(
-                          text: 'text 2',
-                          color: Colors.deepOrange,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        NewWidget(
-                          text: 'text 3',
-                          color: Colors.lightGreenAccent,
-                        ),
-                      ],
-                    ),
-                  );
-                });
+            showBottomSheet(context);
           },
           child: Text(
             "BottomSheet",
@@ -67,6 +30,46 @@ class _BottomSheetImplementationState extends State<BottomSheetImplementation> {
         ),
       ),
     );
+  }
+
+  Future<dynamic> showBottomSheet(BuildContext context) {
+    return showModalBottomSheet(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10), topRight: Radius.circular(10))),
+        context: context,
+        builder: (context) {
+          return Container(
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+                // color: Colors.white,
+                ),
+            height: 350,
+            width: double.infinity,
+            child: Column(
+              children: [
+                NewWidget(
+                  text: 'text 1',
+                  color: Colors.amberAccent,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                NewWidget(
+                  text: 'text 2',
+                  color: Colors.deepOrange,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                NewWidget(
+                  text: 'text 3',
+                  color: Colors.lightGreenAccent,
+                ),
+              ],
+            ),
+          );
+        });
   }
 }
 
