@@ -25,19 +25,27 @@ class _BottomSheetImplementationState extends State<BottomSheetImplementation> {
                 context: context,
                 builder: (context) {
                   return Container(
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         // color: Colors.white,
                         ),
                     height: 350,
+                    width: double.infinity,
                     child: Column(
                       children: [
                         NewWidget(
                           text: 'text 1',
                           color: Colors.amberAccent,
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         NewWidget(
                           text: 'text 2',
                           color: Colors.deepOrange,
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         NewWidget(
                           text: 'text 3',
@@ -73,9 +81,11 @@ class NewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(30),
+      decoration:
+          BoxDecoration(color: color, borderRadius: BorderRadius.circular(10)),
+      width: double.infinity,
+      padding: EdgeInsets.all(20),
       child: Text(text),
-      color: color,
     );
   }
 }
