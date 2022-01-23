@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/screens/i.dart';
+import 'package:flutter_catalog/screens/show_widget.dart';
 import 'package:flutter_catalog/widget_List.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -57,6 +57,7 @@ class ListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      hoverColor: Colors.transparent,
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
       onTap: () {
@@ -74,15 +75,15 @@ class ListTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(14),
               boxShadow: [
                 BoxShadow(
-                    color: Colors.black,
-                    offset: Offset(8, 3),
-                    spreadRadius: -20,
+                    color: Colors.black.withOpacity(0.2),
+                    offset: Offset(5, 3),
+                    spreadRadius: -10,
                     blurRadius: 30)
               ]),
           padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
           child: Text(
             widgets[idx].name,
-            style: GoogleFonts.quicksand(),
+            style: GoogleFonts.quicksand(fontWeight: FontWeight.w500),
           )),
     );
   }
