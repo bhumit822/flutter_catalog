@@ -83,7 +83,8 @@ class ListTile extends StatelessWidget {
           padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
           child: Text(
             widgets[idx].name,
-            style: GoogleFonts.quicksand(fontWeight: FontWeight.w500),
+            style: TextStyle(
+                fontFamily: "quicksands", fontWeight: FontWeight.w500),
           )),
     );
   }

@@ -4,6 +4,9 @@ import 'package:flutter_catalog/widget_list/align.dart';
 import 'package:flutter_catalog/widget_list/animated_align.dart';
 import 'package:flutter_catalog/widget_list/appbar.dart';
 import 'package:flutter_catalog/widget_list/bottomsheet.dart';
+import 'package:flutter_catalog/widget_list/card.dart';
+import 'package:flutter_catalog/widget_list/center.dart';
+import 'package:flutter_catalog/widget_list/checkBox.dart';
 import 'package:flutter_catalog/widget_list/container.dart';
 import 'package:flutter_catalog/widget_list/text.dart';
 
@@ -43,6 +46,21 @@ List<WidgetModel> widgets = [
       implementation: BottomSheetImplementation(),
       description: BottomSheetImplementation(),
       codeString: BottomSheetCode()),
+  WidgetModel(
+      name: "Card",
+      implementation: CardImplementation(),
+      description: CardImplementation(),
+      codeString: CardCode()),
+  WidgetModel(
+      name: "Center",
+      implementation: CenterImplementation(),
+      description: CenterImplementation(),
+      codeString: CenterCode()),
+  WidgetModel(
+      name: "CheckBox",
+      implementation: CheckBoxImplementation(),
+      description: CheckBoxImplementation(),
+      codeString: CheckBoxCode()),
 ];
 
 
