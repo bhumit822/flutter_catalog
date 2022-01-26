@@ -3,10 +3,13 @@ import 'package:flutter_catalog/widget_list/alert_dialogbox.dart';
 import 'package:flutter_catalog/widget_list/align.dart';
 import 'package:flutter_catalog/widget_list/animated_align.dart';
 import 'package:flutter_catalog/widget_list/appbar.dart';
+import 'package:flutter_catalog/widget_list/bottomnavigationbar.dart';
 import 'package:flutter_catalog/widget_list/bottomsheet.dart';
 import 'package:flutter_catalog/widget_list/card.dart';
 import 'package:flutter_catalog/widget_list/center.dart';
 import 'package:flutter_catalog/widget_list/checkBox.dart';
+import 'package:flutter_catalog/widget_list/chip.dart';
+import 'package:flutter_catalog/widget_list/circularprogressindicator.dart';
 import 'package:flutter_catalog/widget_list/container.dart';
 import 'package:flutter_catalog/widget_list/text.dart';
 
@@ -61,6 +64,21 @@ List<WidgetModel> widgets = [
       implementation: CheckBoxImplementation(),
       description: CheckBoxImplementation(),
       codeString: CheckBoxCode()),
+  WidgetModel(
+      name: "BottomNavigationBar",
+      implementation: BottomNavigaionBarImplementation(),
+      description: BottomNavigaionBarImplementation(),
+      codeString: BottomNavigationBarCode()),
+  WidgetModel(
+      name: "Chip",
+      implementation: ChipImplementation(),
+      description: ChipImplementation(),
+      codeString: ChipCode()),
+  WidgetModel(
+      name: "CircularProgressIndicator",
+      implementation: CircularProgressIndiactorImplementation(),
+      description: CircularProgressIndiactorImplementation(),
+      codeString: CircularProgressIndiactorCode()),
 ];
 
 
@@ -68,4 +86,5 @@ List<WidgetModel> widgets = [
 
 //aspectratio
 // baseline
+//backdropflter
 // bottom navigation bar

@@ -84,7 +84,7 @@ class ListTile extends StatelessWidget {
           child: Text(
             widgets[idx].name,
             style: TextStyle(
-                fontFamily: "quicksands", fontWeight: FontWeight.w500),
+                fontFamily: "quicksands", fontWeight: FontWeight.w700),
           )),
     );
   }
