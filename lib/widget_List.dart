@@ -10,6 +10,9 @@ import 'package:flutter_catalog/widget_list/center.dart';
 import 'package:flutter_catalog/widget_list/checkBox.dart';
 import 'package:flutter_catalog/widget_list/chip.dart';
 import 'package:flutter_catalog/widget_list/circularprogressindicator.dart';
+import 'package:flutter_catalog/widget_list/clipoval.dart';
+import 'package:flutter_catalog/widget_list/cliprect.dart';
+import 'package:flutter_catalog/widget_list/column.dart';
 import 'package:flutter_catalog/widget_list/container.dart';
 import 'package:flutter_catalog/widget_list/text.dart';
 
@@ -79,6 +82,21 @@ List<WidgetModel> widgets = [
       implementation: CircularProgressIndiactorImplementation(),
       description: CircularProgressIndiactorImplementation(),
       codeString: CircularProgressIndiactorCode()),
+  WidgetModel(
+      name: "ClipOval",
+      implementation: ClipOvalImplementation(),
+      description: ClipOvalImplementation(),
+      codeString: ClipOvalCode()),
+  WidgetModel(
+      name: "ClipRect",
+      implementation: ClipRectImplementation(),
+      description: ClipRectImplementation(),
+      codeString: ClipRectCode()),
+  WidgetModel(
+      name: "Column",
+      implementation: ColumnImplementation(),
+      description: ColumnImplementation(),
+      codeString: ColumnCode()),
 ];
 
 
@@ -87,4 +105,5 @@ List<WidgetModel> widgets = [
 //aspectratio
 // baseline
 //backdropflter
-// bottom navigation bar
+// clippath
+

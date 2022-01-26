@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/screens/show_widget.dart';
 import 'package:flutter_catalog/widget_List.dart';
@@ -29,13 +31,40 @@ class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
+      extendBodyBehindAppBar: true,
+      backgroundColor: Colors.indigo,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20))),
+          child: ClipRRect(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(20),
+            ),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+              child: AppBar(
+                shadowColor: Colors.white.withOpacity(0.02),
+
+                // shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.only(
+                //         bottomLeft: Radius.circular(20),
+                //         bottomRight: Radius.circular(20))),
+                backgroundColor: Colors.white.withOpacity(0.1),
+                elevation: 1,
+              ),
+            ),
+          ),
+        ),
       ),
       body: Container(
         padding: EdgeInsets.all(15),
         child: ListView.builder(
-            physics: BouncingScrollPhysics(),
+            physics:
+                BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
             clipBehavior: Clip.none,
             itemCount: widgets.length,
             itemBuilder: (context, idx) {
@@ -69,9 +98,11 @@ class ListTile extends StatelessWidget {
                     )));
       },
       child: Container(
-          margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
+          margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
           decoration: BoxDecoration(
-              color: Colors.white,
+              border: Border.all(
+                  color: Colors.blueAccent.withOpacity(0.2), width: 1.5),
+              color: Colors.white.withOpacity(0.2),
               borderRadius: BorderRadius.circular(14),
               boxShadow: [
                 BoxShadow(
@@ -84,7 +115,10 @@ class ListTile extends StatelessWidget {
           child: Text(
             widgets[idx].name,
             style: TextStyle(
-                fontFamily: "quicksands", fontWeight: FontWeight.w700),
+                letterSpacing: 0.5,
+                color: Colors.white,
+                fontFamily: "quicksands",
+                fontWeight: FontWeight.w700),
           )),
     );
   }

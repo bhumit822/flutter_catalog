@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^2.2.0
+  widget_with_codeview: ^2.0.1+2
 
 dev_dependencies:
   flutter_test:
@@ -59,8 +60,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+   - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -78,8 +79,19 @@ flutter:
     - family: quicksands
       fonts:
         - asset: assets/fonts/Quicksand-Regular.ttf
+
+    - family: roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+
+    - family: ubuntu
+      fonts:
+        - asset: assets/fonts/UbuntuMono-Regular.ttf
+    - family: monoid
+      fonts:
+        - asset: assets/fonts/Monoid.ttf
         
-          style: italic
+          
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
