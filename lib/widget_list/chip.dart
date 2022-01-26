@@ -1,20 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/codeString.dart';
 
-class ChipImplementation extends StatelessWidget {
+class ChipImplementation extends StatefulWidget {
   const ChipImplementation({Key? key}) : super(key: key);
 
+  @override
+  State<ChipImplementation> createState() => _ChipImplementationState();
+}
+
+class _ChipImplementationState extends State<ChipImplementation> {
+  bool _isSelected = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
+        child: InkWell(
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
           child: Chip(
-              backgroundColor: Colors.blue,
-              avatar: CircleAvatar(
-                child: Text("1"),
-              ),
+              backgroundColor:
+                  _isSelected ? Colors.blue : Colors.white.withOpacity(0.6),
+              avatar:
+                  _isSelected ? CircleAvatar(child: Icon(Icons.done)) : null,
               elevation: 5,
-              label: Text("Chip1"))),
+              label: Text(
+                "tap on Chip",
+                style:
+                    TextStyle(color: _isSelected ? Colors.white : Colors.blue),
+              )),
+          onTap: () {
+            setState(() {
+              _isSelected = !_isSelected;
+            });
+          },
+        ),
+      ),
     );
   }
 }
