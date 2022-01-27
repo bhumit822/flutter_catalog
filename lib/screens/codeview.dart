@@ -1,23 +1,17 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/syntaxhighlighter.dart';
-import 'package:flutter_catalog/screens/codeview.dart';
 import 'package:flutter_catalog/widget_List.dart';
 
-class Impementation extends StatefulWidget {
-  const Impementation({Key? key, required this.index}) : super(key: key);
-
-  @override
-  _ImpementationState createState() => _ImpementationState();
+class CodeView extends StatelessWidget {
+  const CodeView({Key? key, required this.index}) : super(key: key);
   final int index;
-}
 
-class _ImpementationState extends State<Impementation> {
   @override
   Widget build(BuildContext context) {
-    Widget _implement = widgets[widget.index].implementation;
-    final _code = widgets[widget.index].codeString.codeString();
-
+    Widget _implement = widgets[index].implementation;
+    final _code = widgets[index].codeString.codeString();
     return Scaffold(
         backgroundColor: Colors.indigoAccent,
         extendBodyBehindAppBar: true,
@@ -36,36 +30,6 @@ class _ImpementationState extends State<Impementation> {
                 filter: ImageFilter.blur(
                     sigmaX: 5, sigmaY: 5, tileMode: TileMode.mirror),
                 child: AppBar(
-                  actions: [
-                    InkWell(
-                      splashColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (contex) =>
-                                    CodeView(index: widget.index)));
-                      },
-                      child: Center(
-                          child: Row(
-                        children: [
-                          Icon(Icons.code),
-                          Text(
-                            "Code",
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontFamily: "quicksands",
-                                fontWeight: FontWeight.w600),
-                          ),
-                          // Icon(Icons.code)
-                        ],
-                      )),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                  ],
                   shadowColor: Colors.transparent,
                   backgroundColor: Colors.white.withOpacity(0.5),
                   elevation: 20,
@@ -91,7 +55,19 @@ class _ImpementationState extends State<Impementation> {
                           ],
                           borderRadius: BorderRadius.circular(20)),
                       width: double.infinity,
-                      child: _implement),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: SingleChildScrollView(
+                          child: SelectableText.rich(
+                            TextSpan(
+                              children: [DartSyntaxHighlighter().format(_code)],
+                            ),
+                            style: TextStyle(
+                                fontFamily: "ubuntu",
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      )),
                 ),
               ],
             ),

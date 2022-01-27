@@ -23,7 +23,7 @@ class SyntaxHighlighterStyle {
         // keywordStyle: const TextStyle(color: const Color(0xFF9C27B0)),
         classStyle: const TextStyle(color: const Color(0xFF9C27B0)),
         stringStyle: const TextStyle(color: const Color(0xFF43A047)),
-        punctuationStyle: TextStyle(color: Colors.orange[400]),
+        punctuationStyle: TextStyle(color: Color(0xffff5800)),
         keywordStyle: const TextStyle(color: const Color(0xFF512DA8)),
         constantStyle: const TextStyle(color: const Color(0xFF795548)),
       );
