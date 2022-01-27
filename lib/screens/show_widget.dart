@@ -66,9 +66,9 @@ class _ImpementationState extends State<Impementation> {
                       width: 20,
                     ),
                   ],
-                  shadowColor: Colors.transparent,
-                  backgroundColor: Colors.white.withOpacity(0.5),
-                  elevation: 20,
+                  shadowColor: Colors.white.withOpacity(0.1),
+                  backgroundColor: Colors.white.withOpacity(0.2),
+                  elevation: 1,
                 ),
               ),
             ),
@@ -80,6 +80,7 @@ class _ImpementationState extends State<Impementation> {
               children: [
                 Expanded(
                   child: Container(
+                      padding: EdgeInsets.all(15),
                       clipBehavior: Clip.hardEdge,
                       margin: EdgeInsets.all(15),
                       decoration: BoxDecoration(

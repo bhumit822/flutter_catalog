@@ -13,90 +13,109 @@ import 'package:flutter_catalog/widget_list/circularprogressindicator.dart';
 import 'package:flutter_catalog/widget_list/clipoval.dart';
 import 'package:flutter_catalog/widget_list/cliprect.dart';
 import 'package:flutter_catalog/widget_list/column.dart';
+import 'package:flutter_catalog/widget_list/constrainedbox.dart';
 import 'package:flutter_catalog/widget_list/container.dart';
+import 'package:flutter_catalog/widget_list/cupertinoactionsheet.dart';
+import 'package:flutter_catalog/widget_list/cupertinoactivityindicator.dart';
+import 'package:flutter_catalog/widget_list/cupertinoalertdialog.dart';
+import 'package:flutter_catalog/widget_list/cupertinobutton.dart';
+import 'package:flutter_catalog/widget_list/cupertinocontextmenu.dart';
+import 'package:flutter_catalog/widget_list/cupertinodatepicker.dart';
 import 'package:flutter_catalog/widget_list/text.dart';
 
 List<WidgetModel> widgets = [
   WidgetModel(
       name: "Container",
       implementation: ConatinerImplementation(),
-      description: ConatinerImplementation(),
       codeString: ContainerCode()),
   WidgetModel(
       name: "Text",
       implementation: TextImplementation(),
-      description: TextImplementation(),
       codeString: TextCode()),
   WidgetModel(
       name: "Alert dialogbox",
       implementation: AlertDialogBoxImplementation(),
-      description: AlertDialogBoxImplementation(),
       codeString: AlertDialogBoxCode()),
   WidgetModel(
       name: "Align",
       implementation: AlignImplementation(),
-      description: AlignImplementation(),
       codeString: AlignCode()),
   WidgetModel(
       name: "Animated Align",
       implementation: AnimatedAlignImplementation(),
-      description: AnimatedAlignImplementation(),
       codeString: AnimatedAlignCode()),
   WidgetModel(
       name: "AppBar",
       implementation: AppBarImplementation(),
-      description: AppBarImplementation(),
       codeString: AppBarCode()),
   WidgetModel(
       name: "BottomSheet",
       implementation: BottomSheetImplementation(),
-      description: BottomSheetImplementation(),
       codeString: BottomSheetCode()),
   WidgetModel(
       name: "Card",
       implementation: CardImplementation(),
-      description: CardImplementation(),
       codeString: CardCode()),
   WidgetModel(
       name: "Center",
       implementation: CenterImplementation(),
-      description: CenterImplementation(),
       codeString: CenterCode()),
   WidgetModel(
       name: "CheckBox",
       implementation: CheckBoxImplementation(),
-      description: CheckBoxImplementation(),
       codeString: CheckBoxCode()),
   WidgetModel(
       name: "BottomNavigationBar",
       implementation: BottomNavigaionBarImplementation(),
-      description: BottomNavigaionBarImplementation(),
       codeString: BottomNavigationBarCode()),
   WidgetModel(
       name: "Chip",
       implementation: ChipImplementation(),
-      description: ChipImplementation(),
       codeString: ChipCode()),
   WidgetModel(
       name: "CircularProgressIndicator",
       implementation: CircularProgressIndiactorImplementation(),
-      description: CircularProgressIndiactorImplementation(),
       codeString: CircularProgressIndiactorCode()),
   WidgetModel(
       name: "ClipOval",
       implementation: ClipOvalImplementation(),
-      description: ClipOvalImplementation(),
       codeString: ClipOvalCode()),
   WidgetModel(
       name: "ClipRect",
       implementation: ClipRectImplementation(),
-      description: ClipRectImplementation(),
       codeString: ClipRectCode()),
   WidgetModel(
       name: "Column",
       implementation: ColumnImplementation(),
-      description: ColumnImplementation(),
       codeString: ColumnCode()),
+  WidgetModel(
+      name: "ConstrainedBox baki 6",
+      implementation: ConstrainedBoxImplementation(),
+      codeString: ConstrainedBoxCode()),
+  WidgetModel(
+      name: "CupertinoActionSheet",
+      implementation: CupertinoActionSheetImplementation(),
+      codeString: CupertinoActionSheetCode()),
+  WidgetModel(
+      name: "CupertinoActivityIndicator",
+      implementation: CupertinoActivityIndicatorImplementation(),
+      codeString: CupertinoActivityIndicatorCode()),
+  WidgetModel(
+      name: "CupertinoAlertDialog",
+      implementation: CupertinoAlertDialogImplementation(),
+      codeString: CupertinoAlertDialogCode()),
+  WidgetModel(
+      name: "CupertinoActivityIndicator",
+      implementation: CupertinoButtonImplementation(),
+      codeString: CupertinoButtonCode()),
+  WidgetModel(
+      name: "CupertinoContextMenu",
+      implementation: CupertinoContextMenuImplementation(),
+      codeString: CupertinoContextMenuCode()),
+  WidgetModel(
+      name: "CupertinoDatePicker",
+      implementation: CupertinoDatePickerImplementation(),
+      codeString: CupertinoDatePickerCode()),
 ];
 
 

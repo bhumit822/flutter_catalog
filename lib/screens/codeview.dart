@@ -30,9 +30,9 @@ class CodeView extends StatelessWidget {
                 filter: ImageFilter.blur(
                     sigmaX: 5, sigmaY: 5, tileMode: TileMode.mirror),
                 child: AppBar(
-                  shadowColor: Colors.transparent,
-                  backgroundColor: Colors.white.withOpacity(0.5),
-                  elevation: 20,
+                  shadowColor: Colors.white.withOpacity(0.1),
+                  backgroundColor: Colors.white.withOpacity(0.2),
+                  elevation: 1,
                 ),
               ),
             ),
@@ -58,6 +58,7 @@ class CodeView extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: SingleChildScrollView(
+                          physics: BouncingScrollPhysics(),
                           child: SelectableText.rich(
                             TextSpan(
                               children: [DartSyntaxHighlighter().format(_code)],

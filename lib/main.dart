@@ -123,5 +123,3 @@ class ListTile extends StatelessWidget {
     );
   }
 }
-
-
