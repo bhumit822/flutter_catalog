@@ -39,7 +39,7 @@ class _CupertinoDatePickerImplementationState
                     builder: (context) {
                       return Container(
                         color: Colors.white,
-                        height: 300,
+                        height: 250,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -78,7 +78,6 @@ class _CupertinoDatePickerImplementationState
 class CupertinoDatePickerCode extends CodeString {
   @override
   String codeString() {
-    DateTime? _datetime;
     return """import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/codeString.dart';
@@ -101,12 +100,13 @@ class _CupertinoDatePickerImplementationState
         width: double.infinity,
         child: Column(
           children: [
+            // replace @ with \$ dollarsign
             Text(
-              "${_datetime!.day}/${_datetime.month}/${_datetime.year}",
+              "@{_datetime!.day}/@{_datetime.month}/@{_datetime.year}",
               style: TextStyle(fontFamily: "quicksands", fontSize: 25),
             ),
             Text(
-              "${_datetime.hour}:${_datetime.minute}",
+              "@{_datetime.hour}:@{_datetime.minute}",
               style: TextStyle(fontFamily: "quicksands", fontSize: 25),
             ),
             Spacer(),
