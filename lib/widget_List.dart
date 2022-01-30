@@ -21,6 +21,8 @@ import 'package:flutter_catalog/widget_list/cupertinoalertdialog.dart';
 import 'package:flutter_catalog/widget_list/cupertinobutton.dart';
 import 'package:flutter_catalog/widget_list/cupertinocontextmenu.dart';
 import 'package:flutter_catalog/widget_list/cupertinodatepicker.dart';
+import 'package:flutter_catalog/widget_list/cupertinonavigationbar.dart';
+import 'package:flutter_catalog/widget_list/cupertinopagescaffold.dart';
 import 'package:flutter_catalog/widget_list/text.dart';
 
 List<WidgetModel> widgets = [
@@ -116,6 +118,14 @@ List<WidgetModel> widgets = [
       name: "CupertinoDatePicker",
       implementation: CupertinoDatePickerImplementation(),
       codeString: CupertinoDatePickerCode()),
+  WidgetModel(
+      name: "CupertinoNavigationBar",
+      implementation: CupertinoNavigationBarPage(),
+      codeString: CupertinoNavigationBarCode()),
+  WidgetModel(
+      name: "CupertinoPageScaffold",
+      implementation: CupertinoPageScaffoldPage(),
+      codeString: CupertinoPageScaffoldCode()),
 ];
 
 

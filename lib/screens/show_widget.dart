@@ -80,7 +80,7 @@ class _ImpementationState extends State<Impementation> {
               children: [
                 Expanded(
                   child: Container(
-                      padding: EdgeInsets.all(15),
+                      padding: EdgeInsets.all(8),
                       clipBehavior: Clip.hardEdge,
                       margin: EdgeInsets.all(15),
                       decoration: BoxDecoration(

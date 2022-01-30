@@ -24,10 +24,10 @@ class _CupertinoDatePickerImplementationState
               "${_datetime.day}/${_datetime.month}/${_datetime.year}",
               style: TextStyle(fontFamily: "quicksands", fontSize: 25),
             ),
-            Text(
-              "${_datetime.hour}:${_datetime.minute}",
-              style: TextStyle(fontFamily: "quicksands", fontSize: 25),
-            ),
+            // Text(
+            //   "${_datetime.hour}:${_datetime.minute}:${_datetime.second}",
+            //   style: TextStyle(fontFamily: "quicksands", fontSize: 25),
+            // ),
             Spacer(),
             MaterialButton(
               color: Colors.blueAccent,
@@ -47,6 +47,7 @@ class _CupertinoDatePickerImplementationState
                               color: Colors.white,
                               height: 200,
                               child: CupertinoDatePicker(
+                                mode: CupertinoDatePickerMode.date,
                                 initialDateTime: DateTime.now(),
                                 onDateTimeChanged: (time) {
                                   setState(() {
@@ -56,7 +57,7 @@ class _CupertinoDatePickerImplementationState
                               ),
                             ),
                             CupertinoButton(
-                              color: Colors.blueAccent,
+                              // color: Colors.blueAccent,
                               child: const Text('OK'),
                               onPressed: () => Navigator.of(context).pop(),
                             )

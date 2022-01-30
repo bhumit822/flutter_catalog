@@ -30,48 +30,83 @@ class MyHome extends StatefulWidget {
 class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      backgroundColor: Colors.indigo,
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
-        child: Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20))),
-          child: ClipRRect(
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(20),
-            ),
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
-              child: AppBar(
-                shadowColor: Colors.white.withOpacity(0.02),
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            fit: BoxFit.cover, image: AssetImage("assets/images/2bg.png")),
+        gradient: LinearGradient(
+          colors: [
+            // Color(0xff2a2a72),
+            // Color(0xff009ffd),
 
-                // shape: RoundedRectangleBorder(
-                //     borderRadius: BorderRadius.only(
-                //         bottomLeft: Radius.circular(20),
-                //         bottomRight: Radius.circular(20))),
-                backgroundColor: Colors.white.withOpacity(0.1),
-                elevation: 1,
+            Colors.blueGrey,
+            Colors.red
+          ],
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          // stops: [0.0, -1.0],
+        ),
+      ),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+        child: Scaffold(
+          extendBodyBehindAppBar: true,
+          backgroundColor: Colors.transparent,
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(60),
+            child: Container(
+              decoration: BoxDecoration(
+                  // color: Colors.white,
+                  border: Border.all(
+                      color: Colors.white.withOpacity(0.3), width: 2),
+                  boxShadow: [
+                    BoxShadow(
+                      blurStyle: BlurStyle.inner,
+                      blurRadius: 20,
+                      // spreadRadius: -20
+                      color: Colors.blueGrey.withOpacity(0.3),
+                      // offset: Offset(5, 6),
+                    ),
+                  ],
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20))),
+              child: ClipRRect(
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(18),
+                ),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+                  child: AppBar(
+                    shadowColor: Colors.white.withOpacity(0.02),
+
+                    // shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.only(
+                    //         bottomLeft: Radius.circular(20),
+                    //         bottomRight: Radius.circular(20))),
+                    backgroundColor: Colors.white.withOpacity(0.1),
+                    elevation: 1,
+                  ),
+                ),
               ),
             ),
           ),
+          body: Container(
+            padding: EdgeInsets.all(15),
+            child: ListView.builder(
+                physics: BouncingScrollPhysics(
+                    parent: AlwaysScrollableScrollPhysics()),
+                clipBehavior: Clip.none,
+                itemCount: widgets.length,
+                itemBuilder: (context, idx) {
+                  return ListTile(
+                    idx: idx,
+                  );
+                }),
+          ),
         ),
-      ),
-      body: Container(
-        padding: EdgeInsets.all(15),
-        child: ListView.builder(
-            physics:
-                BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-            clipBehavior: Clip.none,
-            itemCount: widgets.length,
-            itemBuilder: (context, idx) {
-              return ListTile(
-                idx: idx,
-              );
-            }),
       ),
     );
   }
