@@ -36,24 +36,24 @@ class _MyHomeState extends State<MyHome> {
       decoration: BoxDecoration(
         image: DecorationImage(
             fit: BoxFit.cover, image: AssetImage("assets/images/2bg.png")),
-        gradient: LinearGradient(
-          colors: [
-            // Color(0xff2a2a72),
-            // Color(0xff009ffd),
+        // gradient: LinearGradient(
+        //   colors: [
+        //     // Color(0xff2a2a72),
+        //     // Color(0xff009ffd),
 
-            Colors.blueGrey,
-            Colors.red
-          ],
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          // stops: [0.0, -1.0],
-        ),
+        //     Colors.blueGrey,
+        //     Colors.red
+        //   ],
+        //   begin: Alignment.topRight,
+        //   end: Alignment.bottomLeft,
+        //   // stops: [0.0, -1.0],
+        // ),
       ),
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
         child: Scaffold(
           extendBodyBehindAppBar: true,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white.withOpacity(0.3),
           appBar: PreferredSize(
             preferredSize: Size.fromHeight(60),
             child: Container(
@@ -62,13 +62,13 @@ class _MyHomeState extends State<MyHome> {
                   border: Border.all(
                       color: Colors.white.withOpacity(0.3), width: 2),
                   boxShadow: [
-                    BoxShadow(
-                      blurStyle: BlurStyle.inner,
-                      blurRadius: 20,
-                      // spreadRadius: -20
-                      color: Colors.blueGrey.withOpacity(0.3),
-                      // offset: Offset(5, 6),
-                    ),
+                    // BoxShadow(
+                    //   // blurStyle: BlurStyle.inner,
+                    //   blurRadius: 20,
+                    //   // spreadRadius: -20
+                    //   color: Colors.blueGrey.withOpacity(0.3),
+                    //   // offset: Offset(5, 6),
+                    // ),
                   ],
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),

@@ -23,6 +23,9 @@ import 'package:flutter_catalog/widget_list/cupertinocontextmenu.dart';
 import 'package:flutter_catalog/widget_list/cupertinodatepicker.dart';
 import 'package:flutter_catalog/widget_list/cupertinonavigationbar.dart';
 import 'package:flutter_catalog/widget_list/cupertinopagescaffold.dart';
+import 'package:flutter_catalog/widget_list/cupertinoslider.dart';
+import 'package:flutter_catalog/widget_list/datatable.dart';
+import 'package:flutter_catalog/widget_list/datetimepickers.dart';
 import 'package:flutter_catalog/widget_list/text.dart';
 
 List<WidgetModel> widgets = [
@@ -126,6 +129,18 @@ List<WidgetModel> widgets = [
       name: "CupertinoPageScaffold",
       implementation: CupertinoPageScaffoldPage(),
       codeString: CupertinoPageScaffoldCode()),
+  WidgetModel(
+      name: "CupertinoSlider",
+      implementation: CupertinoSliderPage(),
+      codeString: CupertinoSliderCode()),
+  WidgetModel(
+      name: "DataTable",
+      implementation: DataTablePage(),
+      codeString: DataTableCode()),
+  WidgetModel(
+      name: "Date & Time Pickers",
+      implementation: DateTimePickersPage(),
+      codeString: DataTableCode()),
 ];
 
 
@@ -135,4 +150,9 @@ List<WidgetModel> widgets = [
 // baseline
 //backdropflter
 // clippath
+// CustomMultiChildLayout
+// CustomPaint
+// CustomScrollView
+// CustomSingleChildLayout
+
 
