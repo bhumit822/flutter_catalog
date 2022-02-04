@@ -8,12 +8,16 @@ class DateTimePickersPage extends StatefulWidget {
 }
 
 class _DateTimePickersPageState extends State<DateTimePickersPage> {
-  DateTime nt = DateTime.now();
+  DateTime _date = DateTime.now();
+  TimeOfDay _time = TimeOfDay.now();
   @override
   Widget build(BuildContext context) {
-    String day = nt.day.toString();
-    String month = nt.month.toString();
-    String year = nt.year.toString();
+    String day = _date.day.toString();
+    String month = _date.month.toString();
+    String year = _date.year.toString();
+    String hr = _time.hour.toString();
+    String mn = _time.minute.toString();
+    // String sc = _time.second.toString();
 
     return Scaffold(
       body: Center(
@@ -26,9 +30,23 @@ class _DateTimePickersPageState extends State<DateTimePickersPage> {
           ),
           MaterialButton(
             onPressed: () {
-              picker(context);
+              _datepicker(context);
             },
-            child: Text("Date & Time Pickers"),
+            child: Text("Time Pickers"),
+            color: Colors.blue,
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          Text(hr + ":" + mn),
+          SizedBox(
+            height: 30,
+          ),
+          MaterialButton(
+            onPressed: () {
+              _timepicker(context);
+            },
+            child: Text("Time Pickers"),
             color: Colors.blue,
           ),
         ],
@@ -36,16 +54,26 @@ class _DateTimePickersPageState extends State<DateTimePickersPage> {
     );
   }
 
-  Future<void> picker(BuildContext context) async {
+  Future<void> _timepicker(BuildContext contex) async {
+    final TimeOfDay? ptime = await showTimePicker(
+      context: context,
+      initialTime: _time,
+    );
+    setState(() {
+      _time = ptime!;
+    });
+  }
+
+  Future<void> _datepicker(BuildContext context) async {
     final DateTime? ok = await showDatePicker(
         context: context,
-        initialDate: nt,
+        initialDate: _date,
         firstDate: DateTime(2000),
         initialEntryMode: DatePickerEntryMode.calendarOnly,
         lastDate: DateTime(2025));
 
     setState(() {
-      nt = ok!;
+      _date = ok!;
     });
   }
 }

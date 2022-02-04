@@ -26,6 +26,11 @@ import 'package:flutter_catalog/widget_list/cupertinopagescaffold.dart';
 import 'package:flutter_catalog/widget_list/cupertinoslider.dart';
 import 'package:flutter_catalog/widget_list/datatable.dart';
 import 'package:flutter_catalog/widget_list/datetimepickers.dart';
+import 'package:flutter_catalog/widget_list/decoratedbox.dart';
+import 'package:flutter_catalog/widget_list/decoratedboxtransition.dart';
+import 'package:flutter_catalog/widget_list/dismissible.dart';
+import 'package:flutter_catalog/widget_list/divider.dart';
+import 'package:flutter_catalog/widget_list/draggable.dart';
 import 'package:flutter_catalog/widget_list/text.dart';
 
 List<WidgetModel> widgets = [
@@ -141,6 +146,26 @@ List<WidgetModel> widgets = [
       name: "Date & Time Pickers",
       implementation: DateTimePickersPage(),
       codeString: DataTableCode()),
+  WidgetModel(
+      name: "DecoratedBox",
+      implementation: DecoratedBoxPage(),
+      codeString: DecoratedBoxCode()),
+  WidgetModel(
+      name: "DecoratedBoxTransition",
+      implementation: DecoratedBoxTransitionPage(),
+      codeString: DecoratedBoxTransitionCode()),
+  WidgetModel(
+      name: "Dismissible",
+      implementation: DismissiblePage(),
+      codeString: DismissibleCode()),
+  WidgetModel(
+      name: "Divider",
+      implementation: DividerPage(),
+      codeString: DividerCode()),
+  WidgetModel(
+      name: "Draggable",
+      implementation: DraggablePage(),
+      codeString: DraggableCode()),
 ];
 
 
